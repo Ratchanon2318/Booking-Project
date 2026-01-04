@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+label {
+    text-align: left;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 5%;
+    background-color: #016E97; /* สีพื้นฐาน */
+    color: white; /* สีข้อความ */
+    margin-top: 10px;
+    padding: 4px 20px; /* ขนาดปุ่ม */
+    border: none; /* ไม่มีขอบ */
+    border-radius: 4px; /* มุมโค้งมน */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อ hover */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    transition: background-color 0.3s ease; /* การเปลี่ยนสีแบบ smooth */
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #004d66; /* สีเมื่อ hover */
+}
+.report-container {
+    
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.report-table th, .report-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+.report-table th {
+    background-color: #004d66;
+    color: white;
+}
+
+.report-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.report-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.status-approve {
+    color: green;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: red;
+    font-weight: bold;
+}
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination a:hover {
+    background-color: #f1f1f1;
+}
+.report_details {
+    text-decoration: none;
+    color: #0014c9;
+    transition: color 0.3s, background-color 0.3s;
+     padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.report_details:hover {
+    color: white;
+    background-color: #2f3eca;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #dfdddd;
+    padding: 30px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #333;
+    padding: 5px 10px; /* เพิ่ม padding ให้มีขนาดใหญ่ขึ้น */
+    border: 2px solid #333; /* เพิ่มขอบ */
+    transition: background-color 0.3s, color 0.3s; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนสีเกิดอย่างนุ่มนวล */
+}
+
+.close-btn:hover {
+    color: #fff; /* เปลี่ยนสีของ close button เมื่อ hover */
+    background-color: #333; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+}
+
+.close-btn:focus {
+    outline: none; /* ลบเส้นขอบสีน้ำเงินที่ปรากฏเมื่อกด */
+}
+
+.cancel-btn {
+    padding: 6px 12px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+    background-color: #a82525;
+}
+.menu-container {
+    margin-bottom: 20px;
+}
+
+.menu-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menu-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #004d66;
+}
+
+.menu-links li a:hover {
+    background-color: #016E97;
+}
+
+/* Responsive Popup */
+@media screen and (max-width: 768px) {
+    .popup {
+        max-width: 90%;
+    }
+}

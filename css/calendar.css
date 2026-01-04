@@ -1,0 +1,64 @@
+/* กำหนดสีพื้นหลังของปฏิทิน */
+body {
+    font-family: Arial, sans-serif; /* กำหนดแบบอักษร */
+    margin: 0; /* กำหนดขอบเขตของเนื้อหา */
+    padding: 0; /* กำหนดระยะห่างภายใน */
+}
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+/* กำหนดรูปแบบส่วนหัวของปฏิทิน */
+#calendar-header {
+    background-color: #333; /* กำหนดสีพื้นหลัง */
+    color: white; /* กำหนดสีตัวอักษร */
+    padding: 10px; /* กำหนดระยะห่างภายใน */
+    text-align: center; /* กำหนดการจัดวางข้อความตรงกลาง */
+}
+
+/* กำหนดรูปแบบส่วนเนื้อหาของปฏิทิน */
+#calendar {
+    max-width: 1000px; /* กำหนดความกว้างสูงสุด */
+    margin: 20px auto; /* กำหนดการจัดวางตรงกลาง */
+    padding: 0 20px; /* กำหนดระยะห่างภายใน */
+}
+
+/* กำหนดสีของวันที่ในปฏิทิน */
+.fc-daygrid-day {
+    background-color: #f9f9f9; /* กำหนดสีพื้นหลัง */
+    border: 1px solid #ddd; /* กำหนดเส้นขอบ */
+}
+
+/* กำหนดสีของเส้นแบ่งระหว่างวันในปฏิทิน */
+.fc-daygrid-divider {
+    background-color: #ddd; /* กำหนดสีพื้นหลัง */
+}
+
+/* กำหนดสีของกิจกรรมในปฏิทิน */
+.fc-event {
+    background-color: #007bff; /* กำหนดสีพื้นหลัง */
+    color: white; /* กำหนดสีตัวอักษร */
+    border: 1px solid #007bff; /* กำหนดเส้นขอบ */
+    border-radius: 3px; /* กำหนดรูปร่างของมุม */
+    padding: 1px; /* กำหนดระยะห่างภายใน */
+    /*margin-bottom: 1px;  กำหนดระยะห่างด้านล่าง */
+}
+
+/* กำหนดสีของกิจกรรมที่อนุมัติแล้ว */
+.fc-event.approved {
+    background-color: green; /* กำหนดสีพื้นหลัง */
+    border-color: green; /* กำหนดสีของเส้นขอบ */
+}
+
+/* กำหนดสีของกิจกรรมที่รอการอนุมัติ */
+.fc-event.pending {
+    background-color: red; /* กำหนดสีพื้นหลัง */
+    border-color: red; /* กำหนดสีของเส้นขอบ */
+}
+
+/* กำหนดสีของเส้นแบ่งระหว่างเดือนในปฏิทิน */
+.fc-daygrid-divider.fc-widget-header {
+    background-color: #333; /* กำหนดสีพื้นหลัง */
+    color: white; /* กำหนดสีตัวอักษร */
+}

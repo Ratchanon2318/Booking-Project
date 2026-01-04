@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+} 
+td a.edit,
+td a.delete,
+a.back{
+    color: red;
+}
+td a.add {
+    color: blue;
+}
+a.back {
+    color: rgb(0, 175, 0);
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+a:hover {
+    text-decoration: underline;
+    color: #555;
+}
+#addUserPopup {
+    background-color: #fff; /* สีพื้นหลังของป๊อปอัป */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* เงาสำหรับป๊อปอัป */
+    border-radius: 5px; /* รูปร่างของขอบป๊อปอัป */
+    padding: 10px; /* การเพิ่มระยะห่างภายในป๊อปอัป */
+    position: fixed;        
+}
+
+#addUserPopup .closeButton {
+    background-color: #ff0000; /* สีของปุ่มปิดป๊อปอัป */
+    color: #fff; /* สีของตัวอักษรบนปุ่มปิดป๊อปอัป */
+    border: none; /* ไม่มีเส้นขอบปุ่ม */
+    padding: 5px 10px; /* การเพิ่มระยะห่างของปุ่มปิดป๊อปอัป */
+    border-radius: 3px; /* รูปร่างของขอบปุ่มปิดป๊อปอัป */
+    cursor: pointer; /* เปลี่ยนรูปลักษณ์ของเมาส์เมื่อชี้ไปที่ปุ่มปิดป๊อปอัป */
+}
+
+#addUserPopup .closeButton:hover {
+    background-color: #666; /* เปลี่ยนสีพื้นหลังของปุ่มปิดป๊อปอัปเมื่อชี้ไปที่ปุ่ม */
+}
+

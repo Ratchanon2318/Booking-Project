@@ -1,0 +1,83 @@
+<?php
+// เริ่ม session เพื่อใช้งาน session variables
+session_start();
+
+// Include ไฟล์เชื่อมต่อฐานข้อมูลและฟังก์ชัน
+include_once('./function.php');
+include_once('./menu_admin.php');
+
+// เชื่อมต่อฐานข้อมูล
+$objCon = connectDB();
+
+// คำสั่ง SQL เพื่อดึงข้อมูลการจองห้องและชื่อห้อง
+$sql = "SELECT r.room_name, b.desired_date, b.start_time, b.end_time, b.booking_verify
+        FROM booking b
+        JOIN room r ON b.room_id = r.room_id";
+$result = $objCon->query($sql);
+
+// สร้างตัวแปรเก็บข้อมูลการจองสำหรับปฏิทิน
+$events = array();
+
+// วนลูปผลลัพธ์และเพิ่มข้อมูลการจองลงในอาเรย์เหตุการณ์
+while ($row = $result->fetch_assoc()) {
+    // กำหนดรูปแบบเวลาเริ่มต้นและสิ้นสุดเป็นชั่วโมง:นาที
+    $start_time = date('H:i', strtotime($row['start_time']));
+    $end_time = date('H:i', strtotime($row['end_time']));
+
+    // กำหนดสถานะการจองเป็น "อนุมัติแล้ว" หรือ "รออนุมัติ" ตามค่าจากฐานข้อมูล
+    $status = $row['booking_verify'] == 'Approved' ? 'อนุมัติแล้ว' : 'รออนุมัติ';
+
+    // กำหนดข้อมูลเหตุการณ์ในรูปแบบที่ FullCalendar ต้องการ
+    $event = array(
+        'title' => $row['room_name'],
+        'start' => $row['desired_date'],
+        'end' => $row['desired_date'],
+        'description' => $status,                           // สถานะการจอง
+        'color' => $row['booking_verify'] == 'Approved' ? 'green' : 'red', // กำหนดสีตามสถานะ
+        'start_time' => $start_time,                        // เวลาเริ่มต้น
+        'end_time' => $end_time                             // เวลาสิ้นสุด
+    );
+
+    array_push($events, $event); // เพิ่มเหตุการณ์ลงในอาเรย์
+}
+
+// แปลงอาเรย์เหตุการณ์เป็น JSON format
+$eventsJSON = json_encode($events);
+?>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8' />
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.css' rel='stylesheet' />
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <link rel="stylesheet" href="./css/calendar.css">
+</head>
+<body>
+    
+<div id='calendar'>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                locale: 'th', // กำหนดให้แสดงเป็นภาษาไทย
+                events: <?php echo json_encode($events); ?>,
+                eventColor: function(info) {
+                  return info.event.extendedProps.color;
+                  },
+                  locale: 'th',
+                  eventContent: function(info) {
+                  var content = '<b>' + info.event.title + '</b><br/>' + 
+                                'เวลา: ' + info.event.extendedProps.start_time + ' - ' + info.event.extendedProps.end_time + '<br/>' + 
+                                'สถานะ: ' + info.event.extendedProps.description;
+                  return { html: content };
+                  }
+            });
+            
+            calendar.render();
+        });
+    </script>
+    </div>
+</body>
+</html>

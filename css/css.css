@@ -1,0 +1,30 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #ffffff;
+}
+/* a {
+    color: rgb(0, 60, 255);
+    background-color: #ffffff;
+} */
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
+h1 {
+    text-align: center;
+    margin-top: 10px; /* กำหนดระยะห่างข้างบนเป็น 50px */
+    font-size: 24px; /* เปลี่ยนขนาดตัวอักษรของ h1 เป็น 24px */
+    color: #333; /* เปลี่ยนสีข้อความใน h1 เป็นสีเทาเข้ม */
+}

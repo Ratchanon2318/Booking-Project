@@ -1,0 +1,158 @@
+/* กำหนดรูปแบบสำหรับ body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* กำหนดรูปแบบสำหรับ container */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* กำหนดรูปแบบสำหรับ h1 */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 20px;
+}
+/* กำหนดรูปแบบสำหรับฟอร์ม */
+form {
+    margin-top: 18px;
+    font-size: 18px;
+}
+
+/* กำหนดรูปแบบสำหรับ label */
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* กำหนดรูปแบบสำหรับ input[type="text"], textarea */
+input[type="text"],
+textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* กำหนดรูปแบบสำหรับ input[type="submit"] */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+}
+
+/* กำหนดรูปแบบสำหรับ fieldset */
+fieldset {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* กำหนดรูปแบบสำหรับ legend */
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* กำหนดรูปแบบสำหรับ .equipment-table เพื่อให้สามารถเลื่อนซ้ายขวาได้ */
+.equipment-table {
+    overflow-x: auto;
+}
+
+/* กำหนดรูปแบบสำหรับ table */
+table {
+    width: 100%;
+    
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* กำหนดรูปแบบสำหรับ th, td */
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* กำหนดรูปแบบสำหรับ img */
+img {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+/* กำหนดรูปแบบสำหรับฟอร์มภายใน td เพื่อจัดเรียงให้ดีขึ้น */
+form > form {
+    display: inline-block;
+}
+
+/* กำหนดรูปแบบสำหรับ input[type="file"] */
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+/* Media query สำหรับหน้าจอขนาดเล็ก */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+        padding: 6px;
+    }
+
+    input[type="submit"] {
+        padding: 8px;
+    }
+
+    fieldset {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}

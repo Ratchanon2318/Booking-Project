@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* สีพื้นหลังอ่อนเพื่อความสมดุล */
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+/* Example styles for FullCalendar */
+#calendar {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Customize event appearance */
+.fc-event {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #3174ad;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* Event title style */
+.fc-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Event time and status */
+.fc-event-info {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/* QR Code Section */
+#qr-code-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#qr-code-section img {
+    width: 70%; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+.calendar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 80%; /* Adjust as needed */
+}
+
+#qr-code-section {
+    text-align: left;
+}
+
+#calendar {
+    flex: 1;
+    margin-left: 20px; /* Adjust spacing between QR code and calendar */
+}

@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.container {
+    width: 90%;
+    margin: 20px auto;
+    text-align: left; /* จัดข้อความทั้งหมดใน container ให้ชิดซ้าย */
+}
+/* Container for menu links and search form */
+.menu-and-search {
+    display: flex;
+    justify-content: space-between; /* Distribute space between elements */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px;
+}
+
+/* Styles for the search form */
+.search-form {
+    display: flex;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #016E97;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #004d66;
+}
+
+
+.menu-links {
+    display: flex;
+    justify-content: flex-start; /* จัดตำแหน่งลิงก์ให้ชิดซ้าย */
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #ffffff; /* สีข้อความ */
+    padding: 5px 10px; /* ระยะห่างของข้อความ */
+    margin: 1 10px; /* ระยะห่างซ้ายและขวา */
+    border-radius: 1px; /* รอบมุม */
+    background-color: #016E97; /* สีพื้นหลัง */
+}
+
+.menu-link:hover {
+    background-color: #004d66; /* สีพื้นหลังเมื่อโฮเวอร์ */
+}
+
+
+table {
+    width: 100%; /* ปรับขนาดของตารางให้เท่ากับ container */
+    margin: 20px auto; /* จัดตำแหน่งตารางกลางหน้า */
+    border-collapse: collapse;
+    border: 1px solid #ccc; /* เพิ่มขอบตาราง */
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc; /* เพิ่มขอบเฉพาะของ th และ td */
+    
+}
+
+th {
+    color: #e9e6e6;
+    background-color: #004d66;
+}
+
+.edit {
+    color: rgb(255, 255, 255);
+    padding: 6px 12px;
+    background-color:blue;
+    text-decoration: none;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.edit:hover {
+    color: rgb(255, 255, 255); /* สีเมื่อ hover สำหรับ .edit */
+    background-color:rgb(102, 102, 255);
+}
+
+.delete {
+    color: rgb(255, 255, 255);
+    padding: 6px 12px;
+    background-color:rgb(255, 0, 0);
+    text-decoration: none;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.delete:hover {
+    color: rgb(255, 255, 255); /* สีเมื่อ hover สำหรับ .delete */
+    background-color:rgb(255, 104, 104);
+
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.add-user-container {
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งลิงก์ให้อยู่ตรงกลาง */
+    margin: 20px 0;
+}
+
+.add {
+    text-decoration: none;
+    color: #fff;
+    background-color: #016E97;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.add:hover {
+    background-color: #004d66;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination a:hover {
+    background-color: #f1f1f1;
+}

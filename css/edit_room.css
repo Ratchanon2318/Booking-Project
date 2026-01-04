@@ -1,0 +1,145 @@
+/* edit_room.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* img {
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+} */
+
+button {
+    
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* edit_room.css */
+
+#equipment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#equipment-list div {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ระยะห่างระหว่าง element */
+}
+/* edit_room.css */
+#equipment-list input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    margin-right: 5px; /* เพิ่ม margin ด้านขวาของ input */
+}
+
+#equipment-list button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px; /* เพิ่ม margin ด้านซ้ายของ button */
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    
+   
+}
+.row input[type="text"] {
+    flex: 1;
+    margin-right: 10px; /* Add spacing between the input field and the button */
+}
+
+
+
+#equipment-list button:hover {
+    background-color: #c82333; /* เปลี่ยนสีพื้นหลังเมื่อเม้าส์ hover */
+}
+
+
+#equipment-list button:hover {
+    background-color: #c82333;
+}
+
+
+button[type="button"][onclick="addNewEquipment()"] {
+    width: 60%; /* กำหนดความกว้างของลิงก์ */
+    margin: 10px auto; /* จัดให้ลิงก์อยู่ตรงกลาง */
+    background-color: #007bff;
+}
+
+button[type="button"][onclick="addNewEquipment()"]:hover {
+    background-color: #0056b3;
+}
+
+
+button[type="submit"] {
+    width: 60%; /* กำหนดความกว้างของลิงก์ */
+    margin: 1px auto; /* จัดให้ลิงก์อยู่ตรงกลาง */
+    background-color: #28a745;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e7c32;
+}

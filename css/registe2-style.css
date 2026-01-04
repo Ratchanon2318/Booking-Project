@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f1f1;
+}
+
+nav {
+    background: #222;
+    padding: 5px 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+    color: #444;
+}
+
+.logo a,
+.toggle a {
+    font-size: 20px;
+    padding: 9px 4px;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.button.secondary {
+    border-bottom: 1px solid #444;
+}
+
+@media screen and (min-width: 600px) {
+    .menu a {
+        border-bottom: none;
+    }
+
+    .menu > ul > li {
+        text-align: center;
+    }
+
+    .menu > ul > li > a {
+        padding-left: 0;
+    }
+
+    .menu li ul {
+        position: absolute;
+        display: none;
+        width: inherit;
+        background: #222;
+    }
+
+    .menu li:hover ul {
+        display: block;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+@media all and (min-width: 650px) {
+    .menu {
+        justify-content: center;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .toggle {
+        flex: 1;
+        text-align: right;
+    }
+
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle {
+        order: 2;
+    }
+
+    button.secondary {
+        border: 0;
+    }
+
+    .button a {
+        padding: 7px 15px;
+        background: teal;
+        border: 1px solid #006d6d;
+    }
+
+    .button.secondary a {
+        background: transparent;
+    }
+
+    .button a:hover {
+        text-decoration: none;
+    }
+
+    .button:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+
+    .button.secondary a:hover {
+        color: #ddd;
+    }
+
+    .item.secondary {
+        border: 0;
+    }
+
+    .item a {
+        padding: 7px 6px;
+        background: #222;
+    }
+
+    .item.secondary a {
+        background: transparent;
+    }
+
+    .item a:hover {
+        text-decoration: none;
+    }
+
+    .item:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+
+    .item.secondary a:hover {
+        color: #ddd;
+    }
+}
+
+@media all and (min-width: 900px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .item {
+        order: 1;
+    }
+
+    .button {
+        order: 2;
+    }
+
+    .menu li {
+        padding: 16px 10px;
+    }
+
+    .menu li.button {
+        padding-right: 0;
+    }
+}

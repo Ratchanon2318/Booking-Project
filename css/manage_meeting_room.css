@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* จัดการการแสดงผลของตาราง */
+table {
+    width: 98%; /* ปรับขนาดของตารางให้เท่ากับ container */
+    margin: 20px auto; /* จัดตำแหน่งตารางกลางหน้า */
+    border-collapse: collapse;
+    border: 1px solid #333; /* เพิ่มขอบตาราง */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+table thead tr {
+    background-color: #004d66;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th, table td {
+    text-align: center;
+    padding: 12px 15px;
+    border: 1px solid #cccccc; /* เพิ่มขอบให้กับเซลล์ */
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #333;
+}
+
+/* จัดการการแสดงผลของรูปภาพ */
+table td img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* จัดการการแสดงผลของลิงค์ */
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.edit-link {
+    color: rgb(255, 255, 255);
+    padding: 6px 12px;
+    background-color:blue;
+    text-decoration: none; 
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.edit-link:hover {
+    color: rgb(255, 255, 255); /* สีเมื่อ hover สำหรับ .edit */
+    background-color:rgb(102, 102, 255);
+}
+
+.delete-link {
+    color: rgb(255, 255, 255);
+    padding: 6px 12px;
+    background-color:rgb(255, 0, 0);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.delete-link:hover {
+    color: rgb(255, 255, 255); /* สีเมื่อ hover สำหรับ .delete */
+    background-color:rgb(255, 104, 104);
+
+}
+
+
+
+
+/* CSS for Add New Room link */
+.add-room-link {
+    display: block;
+    width: 200px; /* กำหนดความกว้างของลิงก์ */
+    margin: 20px auto; /* จัดให้ลิงก์อยู่ตรงกลาง */
+    padding: 10px 20px;
+    background-color: #016E97;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center; /* จัดให้ข้อความอยู่ตรงกลาง */
+    transition: background-color 0.3s;
+}
+
+.add-room-link:hover {
+    background-color: #004d66;
+}
+

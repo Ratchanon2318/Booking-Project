@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* สีพื้นหลังอ่อนเพื่อความสมดุล */
+}
+
+nav {
+    background-color: #016E97; /* สีพื้นหลังของเมนู */
+    color: white;
+    padding: 10px;
+}
+
+.logo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* จัดให้เนื้อหาอยู่ตรงกลาง */
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.logo img {
+    width: 100vw; /* ขยายเต็มความกว้างของหน้าจอ */
+    height: auto;
+    object-fit: cover; /* ครอบคลุมพื้นที่อย่างเหมาะสม */
+    vertical-align: middle; /* ทำให้รูปภาพตรงกลางในแนวตั้ง */
+}
+
+nav ul.logo {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul.logo li {
+    display: block;
+    width: 100%;
+}
+
+.menu {
+    display: flex; /* ใช้ Flexbox */
+    justify-content: center; /* จัดให้เมนูอยู่ตรงกลางแนวนอน */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu .item {
+    float: left;
+    margin-right: 10px;
+}
+
+.menu .item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.menu .item.active a {
+    background-color: #004d66; /* สีพื้นหลังเมนูที่เลือก */
+}
+
+.menu .item a:hover {
+    background-color: #004d66; /* สีพื้นหลังเมนูเมื่อเมาส์ชี้ */
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #016E97; /* สีพื้นหลังของเมนูย่อย */
+    min-width: 200px;
+}
+
+.submenu a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.submenu a:hover {
+    background-color: #004d66; /* สีพื้นหลังเมนูย่อยเมื่อเมาส์ชี้ */
+}
+
+.menu .item:hover .submenu {
+    display: block;
+}
+
+.toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .toggle {
+        display: block;
+        float: right;
+        margin-right: 10px;
+    }
+
+    .toggle a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.item.button {
+    width: auto;
+    order: 1;
+    display: block;
+}
+
+.toggle {
+    order: 2;
+}
+
+button.secondary {
+    border: 0;
+}
+
+.button a {
+    padding: 7px 15px;
+    background: #004d66; /* ปรับสีปุ่ม */
+    border: 1px solid #003d4d;
+}
+
+.button.secondary a {
+    background: transparent;
+}
+
+.button a:hover {
+    text-decoration: none;
+}
+
+.button:not(.secondary) a:hover {
+    background: #003d4d; /* ปรับสีปุ่มเมื่อเมาส์ชี้ */
+    border-color: #002d3d;
+}
+
+.button.secondary a:hover {
+    color: #ddd;
+}

@@ -1,0 +1,91 @@
+body {
+    background-color: #f0f0f0; /* ตั้งค่าสีพื้นหลังของเว็บไซต์เป็นสีเทาอ่อน */
+    font-family: Arial, sans-serif; /* เปลี่ยนแบบอักษรเป็น Arial หรือแบบอักษรที่ไม่มีขั้นตอน (sans-serif) */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center; /* จัดเนื้อหาใน container ให้อยู่ตรงกลาง */
+}
+
+.container img {
+    display: block;
+    margin: 0 auto 20px; /* จัดให้รูปอยู่ตรงกลางและมีระยะห่างด้านล่าง 20px */
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.container strong {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000; /* เพิ่มสีให้ข้อความ */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container .room-name,
+.container .room-detail {
+    font-size: 18px; /* ปรับขนาดตัวอักษรตามต้องการ */
+    color: #333; /* เปลี่ยนสีข้อความตามต้องการ */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* ตั้งค่าตารางเป็น 2 คอลัมน์ */
+    gap: 5px; /* ลดช่องว่างระหว่างรายการ */
+}
+
+.container ul li {
+    font-size: 16px;
+    background-color: #ffffff; /* เพิ่มพื้นหลังให้รายการ */
+    color: #333;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center; /* จัดเนื้อหาในรายการให้อยู่ตรงกลาง */
+}
+
+.statistics-container {
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งลิงก์ให้อยู่ตรงกลาง */
+    margin: 20px 0;
+}
+
+.statistics-link {
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งลิงก์ให้อยู่ตรงกลาง */
+    align-items: center; /* จัดตำแหน่งลิงก์ให้อยู่ตรงกลางในแนวตั้ง */
+    margin: 20px 0;
+    font-weight: bold; /* เพิ่มความหนาของข้อความ */
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #016E97;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.statistics-link:hover {
+    color: #ffffff; /* เปลี่ยนสีข้อความเมื่อเมาส์ชี้ */
+    background-color: #004d66;
+}
